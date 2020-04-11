@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Bluetooth</string>
     <string name="button_go">Go!</string>
+    <string name="text_select_device">Select device</string>
+
+    <string-array name="myarray">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+    </string-array>
+
 </resources>

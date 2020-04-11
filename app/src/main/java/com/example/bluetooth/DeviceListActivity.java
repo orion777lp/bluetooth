@@ -48,8 +48,7 @@ public class DeviceListActivity extends Activity {
         checkBTState();
 
         textView1 = (TextView) findViewById(R.id.connecting);
-        textView1.setTextSize(40);
-        textView1.setText(" ");
+        textView1.setText("");
 
         // Initialize array adapter for paired devices
         mPairedDevicesArrayAdapter = new ArrayAdapter<String>(this, R.layout.device_name);
@@ -81,15 +80,23 @@ public class DeviceListActivity extends Activity {
     private OnItemClickListener mDeviceClickListener = new OnItemClickListener() {
         public void onItemClick(AdapterView<?> av, View v, int arg2, long arg3) {
 
-            textView1.setText("Connecting...");
+            textView1.setText("Try connection...");
+            //Toast.makeText(getApplicationContext(), "Try connection... ㋡", Toast.LENGTH_LONG).show();
             // Get the device MAC address, which is the last 17 chars in the View
             String info = ((TextView) v).getText().toString();
             String address = info.substring(info.length() - 17);
 
             // Make an intent to start next activity while taking an extra which is the MAC address.
-            Intent i = new Intent(DeviceListActivity.this, main.class);
-            i.putExtra(EXTRA_DEVICE_ADDRESS, address);
-            startActivity(i);
+            try{
+
+                Intent i = new Intent(DeviceListActivity.this, main.class);
+                i.putExtra(EXTRA_DEVICE_ADDRESS, address);
+                startActivity(i);
+
+            }catch (Exception e){
+                Toast.makeText(getApplicationContext(), "Oops => "+e.getMessage(), Toast.LENGTH_LONG).show();
+            }
+
         }
     };
 
