@@ -37,119 +37,134 @@
             style="@style/button"/>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_select_time"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/button_select_time"
-        android:layout_margin="@dimen/margin_min"
-        style="@style/button"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView_day_work"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textview_day_work"
-        android:layout_marginTop="@dimen/margin_min"
-        />
-
-    <Spinner
-        android:id="@+id/day_work"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/day_work"
-        android:spinnerMode="dropdown"
-        android:layout_marginBottom="@dimen/margin_min"
-        android:layout_marginRight="@dimen/margin_min"
-        android:layout_marginLeft="@dimen/margin_min"
-        />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="@dimen/margin_min"
-        android:layout_marginTop="@dimen/margin_min">
-
-        <CheckBox
-            android:id="@+id/checkBox_monday"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Monday" />
+            android:orientation="vertical">
 
-        <CheckBox
-            android:id="@+id/checkBox_tuesday"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Tuesday" />
+            <Button
+                android:id="@+id/button_select_time"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_min"
+                android:text="@string/button_select_time"
+                android:visibility="gone" />
 
-        <CheckBox
-            android:id="@+id/checkBox_wednesday"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Wednesday" />
 
-        <CheckBox
-            android:id="@+id/checkBox_thursday"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Thursday" />
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:timePickerMode="spinner" />
 
-        <CheckBox
-            android:id="@+id/checkBox_friday"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Friday" />
+            <TextView
+                android:id="@+id/textView_day_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_min"
+                android:text="@string/textview_day_work" />
 
-        <CheckBox
-            android:id="@+id/checkBox_saturday"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Saturday" />
+            <Spinner
+                android:id="@+id/day_work"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_min"
+                android:layout_marginRight="@dimen/margin_min"
+                android:layout_marginBottom="@dimen/margin_min"
+                android:entries="@array/day_work"
+                android:spinnerMode="dropdown" />
 
-        <CheckBox
-            android:id="@+id/checkBox_sunday"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Sunday" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_min"
+                android:layout_marginBottom="@dimen/margin_min"
+                android:orientation="horizontal">
 
-    </LinearLayout>
+                <CheckBox
+                    android:id="@+id/checkBox_monday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Monday" />
 
-    <TextView
-        android:id="@+id/textView_time_work"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textview_time_work"
-        android:layout_marginTop="@dimen/margin_min"/>
+                <CheckBox
+                    android:id="@+id/checkBox_tuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Tuesday" />
 
-    <Spinner
-        android:id="@+id/time_work"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/time_work"
-        android:spinnerMode="dropdown"
-        android:layout_marginBottom="@dimen/margin_min"
-        android:layout_marginRight="@dimen/margin_min"
-        android:layout_marginLeft="@dimen/margin_min"/>
+                <CheckBox
+                    android:id="@+id/checkBox_wednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Wednesday" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_thursday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Thursday" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_friday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Friday" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_saturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Saturday" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_sunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Sunday" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_time_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_min"
+                android:text="@string/textview_time_work" />
+
+            <Spinner
+                android:id="@+id/time_work"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_min"
+                android:layout_marginRight="@dimen/margin_min"
+                android:layout_marginBottom="@dimen/margin_min"
+                android:entries="@array/time_work"
+                android:spinnerMode="dropdown" />
 
     <LinearLayout
         android:id="@+id/linear_bottom"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_margin="@dimen/margin_min"
         android:layout_marginStart="@dimen/margin_min"
         android:layout_marginTop="@dimen/margin_min"
         android:layout_marginEnd="@dimen/margin_min"
         android:layout_marginBottom="@dimen/margin_min"
-        android:layout_weight="1"
         android:gravity="bottom"
         android:orientation="horizontal">
 
@@ -193,5 +208,8 @@
         android:layout_height="wrap_content"
         android:text="@string/text_hello" />
 
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
