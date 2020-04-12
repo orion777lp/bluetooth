@@ -19,8 +19,7 @@
             android:layout_weight="1"
             android:text="@string/button_go"
             android:layout_gravity="bottom"
-            android:background="@drawable/button_round"
-            android:textColor="@color/button_text"
-            android:textStyle="bold"/>
+            style="@style/button"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

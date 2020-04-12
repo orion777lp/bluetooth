@@ -25,6 +25,9 @@ public class main extends Activity {
 
     /*Button btnOn, btnOff;
     TextView txtArduino, txtString, txtStringLength, sensorView0, sensorView1, sensorView2, sensorView3;*/
+
+    Spinner spinner;
+
     Handler bluetoothIn;
 
     final int handlerState = 0;                        //used to identify handler message
@@ -46,22 +49,24 @@ public class main extends Activity {
 
         setContentView(R.layout.alarm);
 
-        final AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.edit_ip);
+        //final AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.edit_ip);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.myarray));
-        textView.setAdapter(adapter);
+        //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.time_work));
+        //textView.setAdapter(adapter);
         //set spinner
-        final Spinner spinner = (Spinner) findViewById(R.id.spinner_ip);
+        spinner = (Spinner) findViewById(R.id.day_work);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                textView.setText(spinner.getSelectedItem().toString());
-                textView.dismissDropDown();
+                //textView.setText(spinner.getSelectedItem().toString());
+                //textView.dismissDropDown();
+                //Toast.makeText(getApplicationContext(), spinner.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                textView.setText(spinner.getSelectedItem().toString());
-                textView.dismissDropDown();
+                //textView.setText(spinner.getSelectedItem().toString());
+                //textView.dismissDropDown();
+                //Toast.makeText(getApplicationContext(), spinner.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
             }
         });
 

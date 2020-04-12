@@ -1,52 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_min">
+
+    <TextView
+        android:id="@+id/textView_on_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview_alarm_on"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/margin_min">
+
+        <Button
+            android:id="@+id/button_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_get"
+            android:layout_marginRight="@dimen/margin_min"
+            style="@style/button"/>
+
+        <Button
+            android:id="@+id/button_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_on"
+            android:layout_marginLeft="@dimen/margin_min"
+            style="@style/button"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_select_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_select_time"
+        android:layout_margin="@dimen/margin_min"
+        style="@style/button"/>
+
+    <TextView
+        android:id="@+id/textView_day_work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview_day_work"
+        android:layout_marginTop="@dimen/margin_min"
+        />
+
+    <Spinner
+        android:id="@+id/day_work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/day_work"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="@dimen/margin_min"
+        android:layout_marginRight="@dimen/margin_min"
+        android:layout_marginLeft="@dimen/margin_min"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/margin_min"
+        android:layout_marginTop="@dimen/margin_min">
+
+        <CheckBox
+            android:id="@+id/checkBox_monday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Monday" />
+
+        <CheckBox
+            android:id="@+id/checkBox_tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Tuesday" />
+
+        <CheckBox
+            android:id="@+id/checkBox_wednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Wednesday" />
+
+        <CheckBox
+            android:id="@+id/checkBox_thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Thursday" />
+
+        <CheckBox
+            android:id="@+id/checkBox_friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Friday" />
+
+        <CheckBox
+            android:id="@+id/checkBox_saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Saturday" />
+
+        <CheckBox
+            android:id="@+id/checkBox_sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Sunday" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_time_work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview_time_work"
+        android:layout_marginTop="@dimen/margin_min"/>
+
+    <Spinner
+        android:id="@+id/time_work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/time_work"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="@dimen/margin_min"
+        android:layout_marginRight="@dimen/margin_min"
+        android:layout_marginLeft="@dimen/margin_min"/>
+
+    <LinearLayout
+        android:id="@+id/linear_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/margin_min"
+        android:layout_marginStart="@dimen/margin_min"
+        android:layout_marginTop="@dimen/margin_min"
+        android:layout_marginEnd="@dimen/margin_min"
+        android:layout_marginBottom="@dimen/margin_min"
+        android:layout_weight="1"
+        android:gravity="bottom"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_set"
+            style="@style/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_min"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="@string/button_set" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_set_time"
+            style="@style/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_min"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="@string/button_set_time" />
+
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textView_led_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview_led_status_off" />
+
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button_on_led"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_margin="@dimen/margin_min"
+        android:text="@string/button_on_led"
+        style="@style/button"/>
 
-    <EditText
-        android:id="@+id/editText"
+    <TextView
+        android:id="@+id/textView_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="time" />
+        android:text="@string/text_hello" />
 
-    <AutoCompleteTextView
-        android:id="@+id/edit_ip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="default value" />
-
-    <Spinner
-        android:id="@+id/spinner_ip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/myarray"
-        android:spinnerMode="dropdown" />
 
 </LinearLayout>

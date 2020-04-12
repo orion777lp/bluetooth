@@ -1,15 +1,50 @@
 <resources>
     <string name="app_name">Bluetooth</string>
-    <string name="button_go">Go!</string>
-    <string name="text_select_device">Select device</string>
 
-    <string-array name="myarray">
+    <string name="textview_day_work">Select work day</string>
+    <string name="textview_time_work">Select time work minute</string>
+    <string name="textview_alarm_on">Alarm ON</string>
+    <string name="textview_alarm_off">Alarm OFF</string>
+    <string name="textview_led_status_off">LED OFF</string>
+    <string name="textview_led_status_on">LED ON</string>
+
+    <string name="button_go">Go!</string>
+    <string name="button_get">Get</string>
+    <string name="button_on">On/Off</string>
+    <string name="button_on_led">On/Off LED</string>
+    <string name="button_set">Set Alarm</string>
+    <string name="button_select_time">Select time</string>
+    <string name="button_set_time">Set time</string>
+
+    <string name="text_select_device">Select device</string>
+    <string name="text_hello">Hello...</string>
+
+    <string name="Monday">ПН</string>
+    <string name="Tuesday">ВТ</string>
+    <string name="Wednesday">СР</string>
+    <string name="Thursday">ЧТ</string>
+    <string name="Friday">ПТ</string>
+    <string name="Saturday">СБ</string>
+    <string name="Sunday">ВС</string>
+
+    <string-array name="day_work">
+        <item>All days</item>
+        <item>Weekdays</item>
+        <item>Weekend</item>
+        <item>Tomorrow</item>
+    </string-array>
+
+    <string-array name="time_work">
         <item>1</item>
+        <item>3</item>
         <item>5</item>
         <item>10</item>
+        <item>15</item>
+        <item>20</item>
         <item>30</item>
         <item>60</item>
         <item>120</item>
+        <item>240</item>
     </string-array>
 
 </resources>
