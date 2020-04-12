@@ -1,10 +1,14 @@
 package com.example.bluetooth;
 
+import java.io.FileDescriptor;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.util.List;
 import java.util.UUID;
 import android.app.Activity;
+import android.app.TimePickerDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
@@ -15,13 +19,18 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
-public class main extends Activity {
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
+import android.support.v4.app.Fragment;
+
+
+public class main extends Activity implements TimePickerDialog.OnTimeSetListener {
 
     /*Button btnOn, btnOff;
     TextView txtArduino, txtString, txtStringLength, sensorView0, sensorView1, sensorView2, sensorView3;*/
@@ -132,6 +141,15 @@ public class main extends Activity {
                 Toast.makeText(getBaseContext(), "Turn on LED", Toast.LENGTH_SHORT).show();
             }
         });*/
+
+        findViewById(R.id.button_select_time).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager manager ;
+                DialogFragment timePicker = new timePicker();
+                timePicker.show(,"");
+            }
+        });
     }
 
     private BluetoothSocket createBluetoothSocket(BluetoothDevice device) throws IOException {
@@ -204,6 +222,11 @@ public class main extends Activity {
                 startActivityForResult(enableBtIntent, 1);
             }
         }
+    }
+
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+        Toast.makeText(getApplicationContext(), hourOfDay, Toast.LENGTH_LONG).show();
     }
 
     //create new class for connect thread
